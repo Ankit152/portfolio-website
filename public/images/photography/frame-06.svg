@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <rect width="600" height="400" fill="#0f1113"/>
+  <circle cx="114" cy="12" r="114" fill="#c9963e" opacity="0.13"/>
+<circle cx="142" cy="377" r="33" fill="#7fc7c2" opacity="0.2"/>
+<circle cx="32" cy="15" r="31" fill="#7fc7c2" opacity="0.13"/>
+<circle cx="27" cy="287" r="45" fill="#c9963e" opacity="0.12"/>
+<circle cx="284" cy="3" r="117" fill="#7fc7c2" opacity="0.22"/>
+
+  <text x="24" y="376" font-family="monospace" font-size="12" fill="#7fc7c2" opacity="0.6">frame-06 — placeholder, replace in /public/images/photography</text>
+</svg>

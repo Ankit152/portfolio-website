@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --scan-line: rgba(201, 150, 62, 0.06);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  @apply bg-paper-50 text-ink-950 dark:bg-ink-950 dark:text-fg;
+  font-feature-settings: "ss01" 1, "kern" 1;
+}
+
+/* Faint graph-paper texture used behind the hero — a nod to notebooks and
+   schematics rather than a decorative gradient. Kept subtle by design. */
+.grid-texture {
+  background-image:
+    linear-gradient(var(--scan-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--scan-line) 1px, transparent 1px);
+  background-size: 42px 42px;
+}
+
+.dark .grid-texture {
+  --scan-line: rgba(201, 150, 62, 0.07);
+}
+
+::selection {
+  background: rgba(201, 150, 62, 0.35);
+}
+
+/* Visible keyboard focus everywhere — accessibility floor, not optional */
+:focus-visible {
+  outline: 2px solid #c9963e;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.font-mono-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Thin custom scrollbar for the terminal / contribution stream panels */
+.thin-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.thin-scroll::-webkit-scrollbar-thumb {
+  background: rgba(201, 150, 62, 0.4);
+  border-radius: 3px;
+}
